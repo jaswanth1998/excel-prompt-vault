@@ -4,10 +4,19 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle, Download, Star, Zap, FileSpreadsheet, Brain } from "lucide-react";
 
 interface ExcelPromptsHeroProps {
-  onPurchase: () => void;
+  onPurchase?: () => void;
 }
 
 const ExcelPromptsHero = ({ onPurchase }: ExcelPromptsHeroProps) => {
+  const handlePurchase = () => {
+    // Open Stripe payment link
+    window.open('https://buy.stripe.com/test_14A7sLbRP9Bo7bkgh81sQ01', '_blank');
+    
+    // Call the optional onPurchase callback if provided
+    if (onPurchase) {
+      onPurchase();
+    }
+  };
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden relative">
       {/* Animated background elements */}
@@ -23,7 +32,7 @@ const ExcelPromptsHero = ({ onPurchase }: ExcelPromptsHeroProps) => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <FileSpreadsheet className="w-8 h-8 text-excel-accent" />
-              <span className="text-2xl font-bold text-excel-text-light">ExcelPrompts</span>
+              <span className="text-2xl font-bold text-excel-text-light">Promptica</span>
             </div>
             <Badge className="bg-excel-badge-green/20 text-excel-badge-green border-excel-badge-green/30">
               🔥 Hot Seller
@@ -57,11 +66,11 @@ const ExcelPromptsHero = ({ onPurchase }: ExcelPromptsHeroProps) => {
               {/* CTA Button */}
               <div className="mb-16">
                 <Button 
-                  onClick={onPurchase}
+                  onClick={handlePurchase}
                   className="bg-gradient-to-r from-excel-accent to-excel-badge-green hover:from-excel-accent/90 hover:to-excel-badge-green/90 text-white text-xl font-bold px-12 py-6 rounded-full shadow-2xl hover:shadow-excel-accent/25 transition-all duration-300 transform hover:scale-105"
                 >
                   <Download className="w-6 h-6 mr-3" />
-                  Get Excel Prompts Now - $29
+                  Get Excel Prompts Now - $9.99
                 </Button>
                 <p className="text-excel-text-secondary mt-4">
                   Instant download • Lifetime access • Money-back guarantee
@@ -70,7 +79,7 @@ const ExcelPromptsHero = ({ onPurchase }: ExcelPromptsHeroProps) => {
             </div>
 
             {/* Features Grid */}
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* <div className="grid md:grid-cols-3 gap-8 mb-16">
               <Card className="bg-background/50 border-excel-accent/20 p-8 hover:border-excel-accent/40 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-excel-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -106,10 +115,10 @@ const ExcelPromptsHero = ({ onPurchase }: ExcelPromptsHeroProps) => {
                   </p>
                 </div>
               </Card>
-            </div>
+            </div> */}
 
             {/* What's Included */}
-            <Card className="bg-background/30 border-excel-accent/20 p-12 mb-16">
+            {/* <Card className="bg-background/30 border-excel-accent/20 p-12 mb-16">
               <h2 className="text-4xl font-bold text-center text-excel-text-light mb-12">
                 What's Inside Your <span className="text-excel-accent">Excel Prompts</span> Collection
               </h2>
@@ -167,10 +176,10 @@ const ExcelPromptsHero = ({ onPurchase }: ExcelPromptsHeroProps) => {
                   </div>
                 </div>
               </div>
-            </Card>
+            </Card> */}
 
             {/* Final CTA */}
-            <div className="text-center">
+            {/* <div className="text-center">
               <h3 className="text-3xl font-bold text-excel-text-light mb-6">
                 Ready to Transform Your Excel Experience?
               </h3>
@@ -184,7 +193,7 @@ const ExcelPromptsHero = ({ onPurchase }: ExcelPromptsHeroProps) => {
               <p className="text-excel-text-secondary mt-4 text-sm">
                 30-day money-back guarantee • Secure payment via Stripe
               </p>
-            </div>
+            </div> */}
           </div>
         </main>
       </div>
