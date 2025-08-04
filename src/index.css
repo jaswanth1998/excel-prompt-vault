@@ -2,14 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Excel Prompts Sales Website Design System
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Primary Brand Colors */
+    --background: 0 0% 11.8%; /* #1E1E1E */
+    --foreground: 207 100% 94%; /* #EAF6FF */
+    
+    /* Excel Prompts Brand Colors */
+    --excel-accent: 195 100% 50%; /* #00BFFF - Hologram/Accent */
+    --excel-badge-orange: 32 100% 50%; /* #FFA500 */
+    --excel-badge-green: 120 61% 50%; /* #32CD32 */
+    --excel-text-light: 0 0% 100%; /* #FFFFFF */
+    --excel-text-secondary: 0 0% 78%; /* #C8C8C8 */
+    --excel-text-blue: 217 100% 83%; /* #A9C8FF */
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;

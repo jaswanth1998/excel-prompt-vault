@@ -1,14 +1,16 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import ExcelPromptsHero from "@/components/ExcelPromptsHero";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
+  const handlePurchase = () => {
+    // This is where you'll integrate your Stripe checkout
+    // For now, we'll just log it
+    console.log("Purchase button clicked - integrate with Stripe here");
+    
+    // Example: Redirect to Stripe or open Stripe checkout
+    // window.open('YOUR_STRIPE_CHECKOUT_URL', '_blank');
+  };
+
+  return <ExcelPromptsHero onPurchase={handlePurchase} />;
 };
 
 export default Index;

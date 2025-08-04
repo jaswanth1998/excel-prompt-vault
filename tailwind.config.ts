@@ -24,6 +24,12 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'excel-accent': 'hsl(var(--excel-accent))',
+				'excel-badge-orange': 'hsl(var(--excel-badge-orange))',
+				'excel-badge-green': 'hsl(var(--excel-badge-green))',
+				'excel-text-light': 'hsl(var(--excel-text-light))',
+				'excel-text-secondary': 'hsl(var(--excel-text-secondary))',
+				'excel-text-blue': 'hsl(var(--excel-text-blue))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
